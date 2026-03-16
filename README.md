@@ -36,42 +36,32 @@ Figure 02  Encoder 8 * 3
 
 **Procedure**
 
-Type the program in Quartus software.
-
-Compile and run the program.
-
-Generate the RTL schematic and save the logic diagram.
-
-Create nodes for inputs and outputs to generate the timing diagram.
-
-For different input combinations generate the timing diagram.
+/* write all the steps invloved */
 
 **PROGRAM**
 
-module encode(a,b,c,y0,y1,y2,y3,y4,y5,y6,y7);        
-input y0,y1,y2,y3,y4,y5,y6,y7;        
-output a,b,c;        
-assign a= ( y4 | y5 | y6 | y7);           
-assign b= ( y2 | y3 | y6 | y7);       
-assign c= ( y1 | y3 | y5 | y7);                  
-endmodule         
+/* Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
 
-Developed by: VARUN A
-
-RegisterNumber: 212224050057
+Developed by: VARUN A RegisterNumber:212224050057
+*/
+~~~
+module exp5(din,a,b,c);
+input [0:7] din;
+output a,b,c;
+assign a=(din[4]| din[5]| din[6]| din[7]);
+assign b=(din[2]| din[3]| din[6]| din[7]);
+assign c=(din[1]| din[3]| din[5]| din[7]);
+endmodule
+~~~
 
 **RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
-
-<img width="1920" height="1080" alt="Screenshot (41)" src="https://github.com/user-attachments/assets/d00ca9fc-8779-4440-8f03-64b9cd099b00" />
-
-
+**<img width="878" height="802" alt="image" src="https://github.com/user-attachments/assets/d3182944-8706-4352-8243-94dac78f4eca" />
+*
 **TIMING DIGRAMS FOR Encoder 8 To 3 in Dataflow Modelling**
-
-<img width="1920" height="1080" alt="Screenshot (42)" src="https://github.com/user-attachments/assets/541622ea-0617-4ce2-8a82-80589e377aa9" />
+<img width="1450" height="883" alt="image" src="https://github.com/user-attachments/assets/1d4eeee4-e19a-4e13-8912-300514993fb7" />
 
 
 **RESULTS**
-
-Thus Encoder 8 To 3 in Dataflow Modelling using verilog and validating their functionality using their functional tables is implemented and verified.
+The Encoder 8 To 3 in Dataflow Modelling using verilog and validating their functionality using their functional tables are verified by using Verilog programming.
 
 
